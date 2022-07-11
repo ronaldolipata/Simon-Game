@@ -6,13 +6,23 @@ var gameStart = false;
 var level = -1;
 
 // Game Start
-document.addEventListener("keydown", function() {
+function start() {
   if (!gameStart) {
     nextSequence();
     gameStart = true;
   } else {
     console.log("The game is already started!");
   }
+}
+
+// Start the game by pressing any key
+document.addEventListener("keydown", function() {
+  start();
+});
+
+// Start the game by pressing the title
+document.querySelector("#level-title").addEventListener("click", function() {
+  start();
 });
 
 // Click colors and game functions
@@ -56,7 +66,6 @@ function nextSequence() {
   document.querySelector("#level-title").textContent = "Level " + level;
   makeSound(randomColor);
   animation(randomColor);
-  playerPressedCount = 0;
 }
 
 // Make sound
@@ -83,12 +92,11 @@ function gameOver() {
   }, 100);
 
   setTimeout(function () {
-    document.querySelector("#level-title").innerHTML = "Press A Key to Start";
+    document.querySelector("#level-title").innerHTML = "Press Here or Any Key to Start";
   }, 1000);
 
   gameStart = false;
   level = -1;
-  playerPressedCount = 0;
   storedRandomColor = [];
   storedPlayerColor = [];
 }
