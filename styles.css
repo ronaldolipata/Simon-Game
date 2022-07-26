@@ -41,7 +41,7 @@ body {
 }
 
 .instructions {
-  width: 500px;
+  width: minmax(50vw, 500px);
   opacity: 0.7;
   text-align: center;
   line-height: 1.5rem;
