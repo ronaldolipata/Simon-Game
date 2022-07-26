@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simon</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-</head>
-<body>
-  
-  <div class="container">
-    <h1 id="level-title">Press Here or Any Key to Start</h1>
-    <div class="buttons">
-      <div lass="row">
-        <div type="button" id="green" class="btn green">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="level-title">Press Here or Any Key to Start</h1>
+      <div class="buttons">
+        <div lass="row">
+          <div type="button" id="green" class="btn green"></div>
+          <div type="button" id="red" class="btn red"></div>
         </div>
-        <div type="button" id="red" class="btn red">
+
+        <div class="row">
+          <div type="button" id="yellow" class="btn yellow"></div>
+          <div type="button" id="blue" class="btn blue"></div>
         </div>
       </div>
-  
-      <div class="row">
-        <div type="button" id="yellow" class="btn yellow">
-        </div>
-        <div type="button" id="blue" class="btn blue">
-        </div>
+
+      <div class="instructions">
+        <p><strong>Instructions:</strong></p>
+        <p>
+          The game creates a series of tones and lights and requires a user to
+          repeat the sequence. If the user succeeds, the series becomes
+          progressively longer and more complex. Once the user fails or the time
+          limit runs out, the game is over.
+        </p>
       </div>
     </div>
 
-    <div class="instructions">
-      <p><strong>Instructions:</strong></p>
-      <p>1. Press the title or any key to start the game</p>
-      <p>2. Repeat randomly pressed colors starting from Level 0</p>
-      <p>3. Keep repeating</p>
-    </div>
-  </div>
-
-  <script src="game.js"></script>
-</body>
+    <script src="game.js"></script>
+  </body>
 </html>
